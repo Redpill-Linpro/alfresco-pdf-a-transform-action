@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.alfresco.maven</groupId>
         <artifactId>alfresco-sdk-parent</artifactId>
-        <version>2.1.0</version>
+        <version>1.1.1</version>
     </parent>
     
     <!-- 
@@ -22,9 +22,8 @@
         <!-- 
             | Defines the Alfresco GroupId \ Edition to work against. Allowed values are: org.alfresco | org.alfresco.enterprise
             | NOTE: Please Refer to Alfresco Support for access to Enterprise artifacts -->
-        <alfresco.groupId>org.alfresco</alfresco.groupId>
         <!-- Defines the Alfresco version to work against. Allowed values are: org.alfresco | org.alfresco.enterprise -->
-        <alfresco.version>5.0.2</alfresco.version>
+        <alfresco.version>4.2.6.1</alfresco.version>
         <!-- This control the root logging level for all apps -->
         <app.log.root.level>WARN</app.log.root.level>
         <!-- This controls the default data location for dir.root -->
@@ -55,9 +54,11 @@
   <modules>
     <module>pdf-archival-repo</module>
     <module>pdf-archival-share</module>
-    <module>repo</module>
-    <module>solr-config</module>
-    <module>share</module>
-    <module>runner</module>
   </modules>
+  <repositories>
+    <repository>
+      <id>alfresco-private</id>
+      <url>https://artifacts.alfresco.com/nexus/content/groups/private/</url>
+    </repository>
+  </repositories>
 </project>
